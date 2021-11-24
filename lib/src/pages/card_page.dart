@@ -16,6 +16,10 @@ class CardPage extends StatelessWidget {
           _cardTipo1(),
           SizedBox(height: 30.0),
           _cardTipo2(),
+          SizedBox(height: 30.0),
+          _card2(),
+          SizedBox(height: 30.0),
+          _card3(),
         ],
       ),
     );
@@ -74,6 +78,86 @@ class CardPage extends StatelessWidget {
           BoxShadow(
             color: Colors.black26,
              blurRadius: 10.0,
+            spreadRadius: 2.0,
+            offset: Offset(2.0 , 10.0),
+          )
+        ],
+        borderRadius: BorderRadius.circular(25.0),
+        //color: Colors.blue,
+      ),
+    );
+  }
+  _card2() {
+    final card = Container(
+      //clipBehavior: Clip(),
+      child: Column(
+        children: [
+          FadeInImage(
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            image: NetworkImage(
+                'https://i.pinimg.com/474x/9f/a3/3a/9fa33a08f82f29766cb15602533bfeb1.jpg'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('Tumblr Land Scape'),
+          )
+        ],
+      ),
+    );
+    return Container(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25.0),
+        child: card,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
+            spreadRadius: 2.0,
+            offset: Offset(2.0 , 10.0),
+          )
+        ],
+        borderRadius: BorderRadius.circular(25.0),
+        //color: Colors.blue,
+      ),
+    );
+  }
+  _card3() {
+    final card = Container(
+      //clipBehavior: Clip(),
+      child: Column(
+        children: [
+          FadeInImage(
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            image: NetworkImage(
+                'https://wallpaperaccess.com/full/3558610.jpg'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('Mi casa en la playa'),
+          )
+        ],
+      ),
+    );
+    return Container(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(25.0),
+        child: card,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
             spreadRadius: 2.0,
             offset: Offset(2.0 , 10.0),
           )
